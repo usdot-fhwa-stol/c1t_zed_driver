@@ -1,0 +1,8 @@
+# Covers Visual Studio Code
+# Reference: https://github.com/github/gitignore/blob/master/Global/VisualStudioCode.gitignore
+
+.vscode/*
+*.code-workspace
+
+# Local History for Visual Studio Code
+.history/
