@@ -28,8 +28,9 @@ void ZedDriverWrapper::initialize()
   status_.camera = true;
 
   private_nh_->param<double>("camera_timeout", camera_timeout_, 0.5);
+  private_nh_->param<std::string>("zed_node_name", zed_node_name_, "zed_node");
 
-  camera_sub_ = nh_->subscribe<sensor_msgs::Image>("left_raw/image_raw_color", 1,
+  camera_sub_ = nh_->subscribe<sensor_msgs::Image>(zed_node_name_ + "/left_raw/image_raw_color", 1,
                                                    [this](const sensor_msgs::Image::ConstPtr& msg) {
                                                      last_update_time_ = ros::Time::now();
                                                      status_.status = cav_msgs::DriverStatus::OPERATIONAL;

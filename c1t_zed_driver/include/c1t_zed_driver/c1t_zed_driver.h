@@ -40,6 +40,7 @@ private:
   ros::Time last_update_time_;
 
   double camera_timeout_;
+  std::string zed_node_name_;
 
   /**
    * @brief Initializes the ROS node

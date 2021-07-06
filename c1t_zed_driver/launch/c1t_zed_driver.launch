@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+<!--
+    Copyright 2021 U.S. Department of Transportation, Federal Highway Administration
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+
+<launch>
+    <!-- The ZED camera topics are under a namespace corresponding with the ROS node's name. -->
+    <arg name="zed_node_name" default="zed_node"/>
+
+    <!-- We are using the ZED camera's left camera. -->
+    <remap from="$(arg zed_node_name)/left_raw/camera_info" to="camera/camera_info"/>
+    <remap from="$(arg zed_node_name)/left_raw/image_raw_color" to="camera/image_raw"/>
+
+    <!-- ZED camera wrapper that interfaces with CARMA -->
+    <node name="c1t_zed_driver" pkg="c1t_zed_driver" type="c1t_zed_driver_node" output="screen">
+        <param name="zed_node_name" value="$(arg zed_node_name)"/>
+    </node>
+
+    <!-- Actual ZED camera driver -->
+    <include file="$(find c1t_zed_driver)/launch/zed_node.launch">
+        <arg name="node_name" value="$(arg zed_node_name)"/>
+    </include>
+</launch>
