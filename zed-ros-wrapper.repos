@@ -1,0 +1,37 @@
+repositories:
+    zed-ros-wrapper:
+        type: git
+        url: https://github.com/stereolabs/zed-ros-wrapper.git
+        version: master
+    image_common:
+        type: git
+        url: https://github.com/ros-perception/image_common.git
+        version: noetic-devel
+    geometry2:
+        type: git
+        url: https://github.com/ros/geometry2.git
+        version: noetic-devel
+    diagnostics:
+        type: git
+        url: https://github.com/ros/diagnostics.git
+        version: noetic-devel
+    xacro:
+        type: git
+        url: https://github.com/ros/xacro.git
+        version: noetic-devel
+    roslint:
+        type: git
+        url: https://github.com/ros/roslint.git
+        version: master
+    robot_state_publisher:
+        type: git
+        url: https://github.com/ros/robot_state_publisher.git
+        version: noetic-devel
+    kdl_parser:
+        type: git
+        url: https://github.com/ros/kdl_parser.git
+        version: noetic-devel
+    urdf:
+        type: git
+        url: https://github.com/ros/urdf.git
+        version: melodic-devel
