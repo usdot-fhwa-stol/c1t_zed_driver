@@ -2,4 +2,4 @@ repositories:
   carma-msgs:
     type: git
     url: https://github.com/usdot-fhwa-stol/carma-msgs.git 
-    version: develop
+    version: noetic/develop
