@@ -15,4 +15,5 @@
 # limitations under the License.
 
 source /opt/ros/$ROS_DISTRO/setup.sh
+# cd ~/
 catkin_make_isolated --install --only-pkg-with-deps c1t_zed_driver -DCMAKE_BUILD_TYPE=Release

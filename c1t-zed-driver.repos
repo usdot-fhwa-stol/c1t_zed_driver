@@ -3,3 +3,7 @@ repositories:
     type: git
     url: https://github.com/usdot-fhwa-stol/carma-msgs.git 
     version: noetic/develop
+  carma-utils:
+    type: git
+    url: https://github.com/usdot-fhwa-stol/carma-utils.git
+    version: noetic/develop

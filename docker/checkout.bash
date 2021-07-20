@@ -14,9 +14,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# CMARA dependencies
-vcs import --input src/carma-msgs.repos src/
-vcs import --input src/carma-utils.repos src/
+# # CMARA source dependencies
+# vcs import --input ~/src/c1t-zed-driver.repos ~/src/
+vcs import --input src/c1t-zed-driver.repos src/
 
-# ZED camera dependencies
-vcs import --input src/zed-ros-wrapper.repos src/
+# # Other source dependencies. These would normally be install via rosdep if the
+# # binaries were available. The Noetic binaries are unavailable for the NVIDIA
+# # Jetson platforms.
+# vcs import --input ~/src/source-deps.repos ~/src/
+vcs import --input src/source-deps.repos src/
+
+
+# vcs import --input src/c1t-zed-driver.repos src/
+# vcs import --input src/source-deps.repos src/
