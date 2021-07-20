@@ -14,16 +14,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# # CMARA source dependencies
-# vcs import --input ~/src/c1t-zed-driver.repos ~/src/
+# CMARA source dependencies
 vcs import --input src/c1t-zed-driver.repos src/
 
-# # Other source dependencies. These would normally be install via rosdep if the
-# # binaries were available. The Noetic binaries are unavailable for the NVIDIA
-# # Jetson platforms.
-# vcs import --input ~/src/source-deps.repos ~/src/
+# Other source dependencies. These would normally be install via rosdep if the
+# binaries were available. The Noetic binaries are unavailable for the NVIDIA
+# Jetson platforms.
 vcs import --input src/source-deps.repos src/
-
-
-# vcs import --input src/c1t-zed-driver.repos src/
-# vcs import --input src/source-deps.repos src/
