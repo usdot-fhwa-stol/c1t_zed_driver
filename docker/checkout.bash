@@ -20,4 +20,4 @@ vcs import --input src/c1t-zed-driver.repos src/
 # Other source dependencies. These would normally be install via rosdep if the
 # binaries were available. The Noetic binaries are unavailable for the NVIDIA
 # Jetson platforms.
-vcs import --input src/source-deps.repos src/
+vcs import --recursive --input src/source-deps.repos src/
