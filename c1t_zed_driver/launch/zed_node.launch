@@ -21,7 +21,7 @@
     <arg name="camera_name" default="zed"/>
     <arg name="node_name" default="zed_node"/>
 
-    <include file="$(find zed_wrapper)/launch/include/zed_camera.launch.xml">
+    <include file="$(find c1t_zed_driver)/launch/include/zed_camera.launch.xml">
         <arg name="camera_name" value="$(arg camera_name)"/>
         <arg name="camera_model" value="$(arg camera_model)"/>
         <arg name="node_name" value="$(arg node_name)"/>

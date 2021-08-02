@@ -53,5 +53,6 @@ install(TARGETS ${PROJECT_NAME}_node
 
 install(DIRECTORY
     launch
+    config
     DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
